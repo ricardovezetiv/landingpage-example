@@ -1,0 +1,18 @@
+language: python
+dist: xenial
+sudo: true
+
+python:
+  - 3.9
+
+before_install:
+  - pip install --upgrade pip
+  - pip install poetry
+  - poetry --version
+  - poetry config virtualenvs.in-project true
+
+install:
+  - poetry install -vv
+
+script:
+  - poetry run flake8 .
