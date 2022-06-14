@@ -38,7 +38,7 @@ jobs:
         run: poetry install
 
       - name: Look for style errors
-      run: poetry run flake8 .
+        run: poetry run flake8 .
 
       - name: Look for auto format errors
-      run: poetry run black -l 79 --check --diff .
+        run: poetry run black -l 79 --check --diff .
