@@ -26,3 +26,10 @@ jobs:
 
       - name: Display Python version
         run: python --version
+
+      - name: Install Poetry
+        run: |
+          pip install --upgrade pip
+          pip install poetry
+          poetry --version
+          poetry config virtualenvs.in-project true
